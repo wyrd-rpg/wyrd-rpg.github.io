@@ -7,7 +7,7 @@ The four abilities are meant to feel classic yet open to interpretation. Dependi
 - **Power** might be used for tests requiring brawn, brute force, or exerting physical presence and authority. Characters have a number of item slots equal to their Power.
 - **Grace** might be used for tests using finesse, coordination, reflexes, or social situations involving elegance, refinement or decorum.
 - **Intellect** might be used to test mental fortitude while wielding magic, deciphering languages, identifying poisons, or riddling.
-- **Will** might be used to test one’s mettle through persuasion, deceit, charm, or to channel (or resist) the otherworldly.
+- **Will** might be used to test one's mettle through persuasion, deceit, charm, or to channel (or resist) the otherworldly.
 
 ## Rolling the Dice
 
@@ -15,7 +15,7 @@ When attempting something where failure has consequences, **roll an ability die*
 
 | Result | Outcome |
 | ----------- | ----------- |
-| 1-3 | **Disaster**. Face the risk’s full consequences. |
+| 1-3 | **Disaster**. Face the risk's full consequences. |
 | 4-5 | **Setback**. You succeed and suffer a lesser consequence, or achieve partial success. |
 | 6+ | **Success**. The higher, the better the result. |
 | 6++ | **Multiple Successes**. Gain an added benefit. |
@@ -40,7 +40,7 @@ PCs have 10 **item slots**. Most items take up 1 slot, but bulky items take up 2
 
 ## Fatigue
 
-PCs deprived of food or rest for more than a day add **fatigue** to their inventory. **[Casting a spell]()**, **[pushing yourself](#pushing-yourself)**, or **[dodging]()** also adds fatigue. Fatigue taken with a full inventory becomes damage, ignoring armor. *[See Health, Injury & Death]()*. After a full night’s rest, roll **Power** to determine the amount of fatigue removed. Remove all fatigue after an extended **downtime** or by **carousing**.
+PCs deprived of food or rest for more than a day add **fatigue** to their inventory. **[Casting a spell]()**, **[pushing yourself](#pushing-yourself)**, or **[dodging]()** also adds fatigue. Fatigue taken with a full inventory becomes damage, ignoring armor. *[See Health, Injury & Death]()*. After a full night's rest, roll **Power** to determine the amount of fatigue removed. Remove all fatigue after an extended **downtime** or by **carousing**.
 
 ## Pushing Yourself
 
@@ -48,7 +48,7 @@ A character can **push themself** for a **[help die](#rolling-the-dice)** on a s
 
 ## NPC Reactions
 
-If it’s unclear how an NPC might react to the party, the referee may **roll 1d6** to find out.
+If it's unclear how an NPC might react to the party, the referee may **roll 1d6** to find out.
 
 | 1 | 2-3 | 4-5 | 6 |
 | --- | --- | --- | --- |
