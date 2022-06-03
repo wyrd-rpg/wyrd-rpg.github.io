@@ -30,7 +30,7 @@ Roll or choose your character's background. This determines starting **wealth** 
 
 ## 5. Inventory
 
-Characters have **10 item slots**. Most items take up 1 slot, but **bulky** items take up 2. Slots are also used in abstract ways for [fatigue](getting-wyrd.md#fatigue) and [spellcasting]() (see **Fatigue**).
+Characters have **10 item slots**. Most items take up 1 slot, but **bulky** items take up 2. Slots are also used in abstract ways for [fatigue](getting-wyrd.md#fatigue) and [spellcasting](magic.md#casting-a-spell) (see **Fatigue**).
 
 All **consumable items** are denoted with a usage dice value (see **[Usage Dice](getting-wyrd.md#usage-dice)**). Weapons and armor are considered consumable, as they can become damaged or broken. Note the dice value for each as you roll or choose items.
 
@@ -42,9 +42,9 @@ All players begin with:
 - A waterskin (Ud4, 1 slot)
 - 1 Wealth Die (based on background) 
 
-Record these items, then roll once on each of the **[Equipment]()** tables on the next page to determine your weapons, armor, and equipment. If indicated, roll on the **[Spell Creation]()** table. Pick only one item for each result.
+Record these items, then roll once on each of the **[Equipment](equipment.md)** tables on the next page to determine your weapons, armor, and equipment. If indicated, roll on the **[Spell Creation](magic.md#spell-creation)** table. Pick only one item for each result.
 
-For something closer to traditional classes, choose from the list of **[Example Kits]()**.
+For something closer to traditional classes, choose from the list of **[Example Kits](equipment.md#example-kits)**.
 
 ## 7. Name Thyself
 

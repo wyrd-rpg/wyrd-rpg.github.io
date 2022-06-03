@@ -148,7 +148,7 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
 ◆ Axe, *Ud6* |
 ◆ Dog, *d2 POW, Bite Ud6* |
 ◆ Padded Leathers, *Ud4* |
-◆ Huntsman’s Horn |
+◆ Huntsman's Horn |
 
 | Thief  *7 Slots* |
 |:-------------------|
