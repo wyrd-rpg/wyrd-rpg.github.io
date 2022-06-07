@@ -12,21 +12,35 @@ Characters have four abilities: **Power**, **Grace**, **Intellect**, and **Will*
 
 Roll or choose your character's background. This determines starting **wealth** and knowledge.
 
-| background table |
-| --- |
-| tbd |
+<ol id="backgrounds-list"></ol>
 
 ## 3. Physical Traits
 
-| traits tables |
-| --- |
-| tbd |
+### Appearance
+
+<ol id="appearance-list"></ol>
+
+### Physical Detail
+
+<ol id="physical-detail-list"></ol>
+
+### Clothing
+
+<ol id="clothing-list"></ol>
 
 ## 4. Personality Traits
 
-| traits tables |
-| --- |
-| tbd |
+### Vice
+
+<ol id="vice-list"></ol>
+
+### Virtue
+
+<ol id="virtue-list"></ol>
+
+### Mannerism
+
+<ol id="mannerism-list"></ol>
 
 ## 5. Inventory
 
@@ -49,3 +63,6 @@ For something closer to traditional classes, choose from the list of **[Example 
 ## 7. Name Thyself
 
 Pray, do not get too attached. It's a dangerous world out there...
+
+<!-- Wyrd JS -->
+<script src="./js/index.js" defer></script>
