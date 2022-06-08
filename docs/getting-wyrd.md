@@ -4,7 +4,7 @@
 
 The four abilities are meant to feel classic yet open to interpretation. Depending on the PC's intent and approach, each ability could arguably be used for any challenge. Make your case.
 
-- **Power** might be used for tests requiring brawn, brute force, or exerting physical presence and authority. Characters have a number of item slots equal to their Power.
+- **Power** might be used for tests requiring brawn, brute force, or exerting physical presence and authority.
 - **Grace** might be used for tests using finesse, coordination, reflexes, or social situations involving elegance, refinement or decorum.
 - **Intellect** might be used to test mental fortitude while wielding magic, deciphering languages, identifying poisons, or riddling.
 - **Will** might be used to test one's mettle through persuasion, deceit, charm, or to channel (or resist) the otherworldly.
