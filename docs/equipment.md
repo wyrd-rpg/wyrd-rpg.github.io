@@ -69,6 +69,8 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
 
 ## Example Kits
 
+<div class="kits-grid">
+
 | Bard *7 slots*     |
 |:-------------------|
 | ◆ Rapier, *Ud6* |
@@ -158,3 +160,5 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
 | ◆ Grappling hook |
 | ◆ Lockpicks, *Ud6* |
 | ◆ Metal file |
+
+</div>
