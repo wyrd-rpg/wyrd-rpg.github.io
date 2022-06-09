@@ -3,7 +3,6 @@
 > A rules-light, low-prep tabletop adventure game
 
 [Read the Rules](#wyrd)
-[Itch](https://beardofprey.itch.io/wyrd-rpg)
-[GitHub](https://github.com/wyrd-rpg/wyrd-rpg.github.io)
+[Buy the Game](https://beardofprey.itch.io/wyrd-rpg)
 
 Draft v0.2

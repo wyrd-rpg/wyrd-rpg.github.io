@@ -12,35 +12,35 @@ Characters have four abilities: **Power**, **Grace**, **Intellect**, and **Will*
 
 Roll or choose your character's background. This determines starting **wealth** and knowledge.
 
-<ol id="backgrounds-list"></ol>
+<ol id="backgrounds-list" class="d36-table"></ol>
 
 ## 3. Physical Traits
 
 ### Appearance
 
-<ol id="appearance-list"></ol>
+<ol id="appearance-list" class="d36-table"></ol>
 
 ### Physical Detail
 
-<ol id="physical-detail-list"></ol>
+<ol id="physical-detail-list" class="d36-table"></ol>
 
 ### Clothing
 
-<ol id="clothing-list"></ol>
+<ol id="clothing-list" class="d36-table"></ol>
 
 ## 4. Personality Traits
 
 ### Vice
 
-<ol id="vice-list"></ol>
+<ol id="vice-list" class="d36-table"></ol>
 
 ### Virtue
 
-<ol id="virtue-list"></ol>
+<ol id="virtue-list" class="d36-table"></ol>
 
 ### Mannerism
 
-<ol id="mannerism-list"></ol>
+<ol id="mannerism-list" class="d36-table"></ol>
 
 ## 5. Inventory
 
