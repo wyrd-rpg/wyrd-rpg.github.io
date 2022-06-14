@@ -1,6 +1,6 @@
 # Equipment
 
-Roll or choose one result each from **Armor & Clothing**, **Weapons**, and all **Adventuring Gear** tables. For any results with a plus (+), gain the item in the group(s) to the left. *Ex. Rolling 6, 5 for Armor gets you a Shield, Helm, and Iron Cuirass.*
+Roll or choose one result each from [**Armor & Clothing**](#armor--clothing), [**Weapons**](#weapons), and all [**Adventuring Gear**](#adventuring-gear) tables. For any results with a plus (+), gain the item in the group(s) to the left. *Ex. Rolling 6, 5 for Armor gets you a Shield, Helm, and Iron Cuirass.*
 
 ## Weapons & Usage Die
 
@@ -17,9 +17,7 @@ Roll or choose one result each from **Armor & Clothing**, **Weapons**, and all *
 
 It's easy to create your own custom gear. Choose a base usage dice, then adjust based on quality. Don't forget an evocative name. 
 
-##### Equipment Usage Dice
-
-| Die | Traits |
+| Usage Die | Example Traits |
 | - | - |
 | **Ud1** | Single use |
 | **Ud2** | Low quality/damage, limited supply |
@@ -31,35 +29,61 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
 
 ## Armor & Clothing
 
-| armor table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atArmor"
+    >
+        <!-- <small>◆<span v-if="item.fields.Bulky">◆</span>&nbsp;</small> -->
+        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
+        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+    </li>
+</ol>
 
 ## Weapons
 
-| weapon table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atWeapons"
+    >
+        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
+        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+    </li>
+</ol>
 
 ## Adventuring Gear
 
 ### Dungeoneering Gear
 
-| dungeoneering gear table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atDungeoneeringGear"
+    >
+        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
+        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+    </li>
+</ol>
 
 ### Tools
 
-| Tools table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atTools"
+    >
+        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
+        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+    </li>
+</ol>
 
 ### Trinkets
 
-| Trinkets table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atTrinkets"
+    >
+        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
+        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+    </li>
+</ol>
 
 ## Book Subjects
 
