@@ -137,7 +137,7 @@
     @media (min-width: 450px) {
       .markdown-section .d36-table {
         column-count: 3;
-        max-width: 30rem;
+        max-width: 41rem;
       }
     }
 
@@ -185,6 +185,9 @@
             atMannerism: null,
             atArmor: null,
             atWeapons: null,
+            atDungeoneeringGear: null,
+            atTools: null,
+            atTrinkets: null     
           };
         },
         mounted () {
@@ -195,7 +198,8 @@
             url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
-            .then(response => (this.atBackgrounds = response.data.records));
+            .then(response => (this.atBackgrounds = response.data.records))
+            .catch(error => console.log(error));
 
           // Appearance
           table = 'Traits';
@@ -203,7 +207,8 @@
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
-            .then(response => (this.atAppearance = response.data.records));
+            .then(response => (this.atAppearance = response.data.records))
+            .catch(error => console.log(error));
 
           // Physical Detail
           table = 'Traits';
@@ -211,7 +216,8 @@
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
-            .then(response => (this.atPhysicalDetail = response.data.records));
+            .then(response => (this.atPhysicalDetail = response.data.records))
+            .catch(error => console.log(error));
 
           // Clothing
           table = 'Traits';
@@ -219,7 +225,8 @@
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
-            .then(response => (this.atClothing = response.data.records));
+            .then(response => (this.atClothing = response.data.records))
+            .catch(error => console.log(error));
 
           // Vice
           table = 'Traits';
@@ -227,7 +234,8 @@
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
-            .then(response => (this.atVice = response.data.records));
+            .then(response => (this.atVice = response.data.records))
+            .catch(error => console.log(error));
 
           // Virtue
           table = 'Traits';
@@ -235,7 +243,8 @@
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
-            .then(response => (this.atVirtue = response.data.records));
+            .then(response => (this.atVirtue = response.data.records))
+            .catch(error => console.log(error));
           
           // Mannerism
           table = 'Traits';
@@ -243,7 +252,62 @@
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
-            .then(response => (this.atMannerism = response.data.records));
+            .then(response => (this.atMannerism = response.data.records))
+            .catch(error => console.log(error));
+
+          // Armor
+          table = 'Live_Starting_Equipment';
+          view = 'Armor';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atArmor = response.data.records))
+            .catch(error => console.log(error));
+
+          // Weapons
+          table = 'Live_Starting_Equipment';
+          view = 'Weapons';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWeapons = response.data.records))
+            .catch(error => console.log(error));
+
+          // Weapons
+          table = 'Live_Starting_Equipment';
+          view = 'Weapons';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWeapons = response.data.records))
+            .catch(error => console.log(error));
+
+          // Dungeoneering Gear
+          table = 'Live_Starting_Equipment';
+          view = 'Dungeoneering Gear';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atDungeoneeringGear = response.data.records))
+            .catch(error => console.log(error));
+
+          // Tools
+          table = 'Live_Starting_Equipment';
+          view = 'Tools';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTools = response.data.records))
+            .catch(error => console.log(error));
+          
+          // Trinkets
+          table = 'Live_Starting_Equipment';
+          view = 'Trinkets';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTrinkets = response.data.records))
+            .catch(error => console.log(error));
         }
       },
     }
