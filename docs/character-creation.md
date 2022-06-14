@@ -12,35 +12,77 @@ Characters have four abilities: **Power**, **Grace**, **Intellect**, and **Will*
 
 Roll or choose your character's background. This determines starting **wealth** and knowledge.
 
-<ol id="backgrounds-list" class="d36-table"></ol>
+<ol class="d36-table">
+    <li
+        v-for="item in atBackgrounds"
+    >
+        {{ item.fields.Background }}
+    </li>
+</ol>
 
 ## 3. Physical Traits
 
 ### Appearance
 
-<ol id="appearance-list" class="d36-table"></ol>
+<ol class="d36-table">
+    <li
+        v-for="item in atAppearance"
+    >
+        {{ item.fields.Trait }}
+    </li>
+</ol>
 
 ### Physical Detail
 
-<ol id="physical-detail-list" class="d36-table"></ol>
+<ol class="d36-table">
+    <li
+        v-for="item in atPhysicalDetail"
+    >
+        {{ item.fields.Trait }}
+    </li>
+</ol>
 
 ### Clothing
 
-<ol id="clothing-list" class="d36-table"></ol>
+<ol class="d36-table">
+    <li
+        v-for="item in atClothing"
+    >
+        {{ item.fields.Trait }}
+    </li>
+</ol>
 
 ## 4. Personality Traits
 
 ### Vice
 
-<ol id="vice-list" class="d36-table"></ol>
+<ol class="d36-table">
+    <li
+        v-for="item in atVice"
+    >
+        {{ item.fields.Trait }}
+    </li>
+</ol>
 
 ### Virtue
 
-<ol id="virtue-list" class="d36-table"></ol>
+<ol class="d36-table">
+    <li
+        v-for="item in atVirtue"
+    >
+        {{ item.fields.Trait }}
+    </li>
+</ol>
 
 ### Mannerism
 
-<ol id="mannerism-list" class="d36-table"></ol>
+<ol class="d36-table">
+    <li
+        v-for="item in atMannerism"
+    >
+        {{ item.fields.Trait }}
+    </li>
+</ol>
 
 ## 5. Inventory
 
@@ -54,7 +96,7 @@ All players begin with:
 
 - Hardtack or pemmican (Ud4, 1 slot)
 - A waterskin (Ud4, 1 slot)
-- 1 Wealth Die (based on background) 
+- 1 Wealth Die (based on background)
 
 Record these items, then roll once on each of the **[Equipment](equipment.md)** tables on the next page to determine your weapons, armor, and equipment. If indicated, roll on the **[Spell Creation](magic.md#spell-creation)** table. Pick only one item for each result.
 
@@ -63,6 +105,3 @@ For something closer to traditional classes, choose from the list of **[Example 
 ## 7. Name Thyself
 
 Pray, do not get too attached. It's a dangerous world out there...
-
-<!-- Wyrd JS -->
-<script src="./js/index.js" defer></script>

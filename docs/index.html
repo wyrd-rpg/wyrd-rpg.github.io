@@ -12,11 +12,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
   <style>
+    /* Color Variables
+    ============================================================================= */
+    :root {
+      --antique-white        : #FEEFDD;
+      --almond               : #ECDFD2;
+      --umber                : #68534D;
+      --dark-lava            : #4B3E2E;
+      --auburn               : #9A332C;
+      --crimson-ua           : #962B33;
+      --antique-ruby         : #7E252B;
+
+      --heading-color        : var(--dark-lava);
+      --sub-heading-color    : var(--auburn);
+      --interactive          : var(--crimson-ua);
+      --interactive-hover    : var(--antique-ruby);
+    }
     /* Base
     ============================================================================= */
     :root {
-      --base-background-color: #fff;
-      --base-color           : var(--mono-shade2);
+      --base-background-color: var(--antique-white);
+      --base-color           : var(--dark-lava);
       --base-font-family     : 'IM Fell DW Pica', serif;
       --base-font-size       : 19px;
       --base-font-weight     : normal;
@@ -24,17 +40,18 @@
       --base-line-height     : 1.7;
 
       --breakpoint--sm       : 450px;
-
-      --sidebar-background   : linear-gradient(90deg, rgba(255,255,255,1) 33%, rgba(255,255,255,0) 100%);
+      /* sidebar */
+      --sidebar-name-color       : var(--interactive);
+      --sidebar-name-color--hover: var(--interactive-hover);
     }
 
-    body,
-    .cover.show {
-      background: url('https://www.toptal.com/designers/subtlepatterns/uploads/ricepaper2.png') !important;
+    .cover:before {
+      background: var(--base-background-color);
     }
 
-    main {
-      background: linear-gradient(185deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+    .sidebar {
+      border-right: 5px double rgba(0,0,0,0.25);
+      background: none;
     }
 
     .markdown-section {
@@ -51,12 +68,29 @@
       --heading-h1-font-size              : var(--font-size-xxxl);
       --heading-h2-font-size              : var(--font-size-xxl);
       --heading-h3-font-size              : var(--font-size-xl);
+      /* Text */
+      --strong-color                      : var(--base-color);
+      --link-color                        : var(--interactive);
+      --link-color--hover                 : var(--interactive-hover);
+      --table-row-even-background         : rgba(255,255,255, 0.25);
+      --table-row-odd-background          : var(--almond);
+      --blockquote-background             : var(--almond);
+    }
+
+    .markdown-section h1 {
+      color: var(--heading-color);
     }
 
     .markdown-section h1,
     .markdown-section h2,
     .markdown-section h3 {
       line-height: 1;
+    }
+
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4 {
+      color: var(--sub-heading-color);
     }
 
     .markdown-section h1+h2, .markdown-section h1+h3, .markdown-section h1+h4, .markdown-section h1+h5, .markdown-section h1+h6, .markdown-section h2+h3, .markdown-section h2+h4, .markdown-section h2+h5, .markdown-section h2+h6, .markdown-section h3+h4, .markdown-section h3+h5, .markdown-section h3+h6, .markdown-section h4+h5, .markdown-section h4+h6, .markdown-section h5+h6 {
@@ -68,15 +102,22 @@
       display: table;
     }
 
+    body .docsify-pagination-container {
+      border-top: 5px double rgba(0,0,0,.25);
+    }
+
     /* Cover
     ============================================================================= */
     :root {
-      --cover-heading-color                              : black;
+      --cover-heading-color                              : var(--heading-color);
       --cover-heading-font-size                          : 19vw;
       --cover-heading-font-size-min                      : 7rem;
       --cover-heading-font-size-max                      : 18rem;
       --cover-heading-font-weight                        : 600;
       --cover-background-color                           : unset;
+      --cover-link-color                                 : var(--interactive);
+      --cover-link-color--hover                          : var(--interactive-hover);
+      --cover-link-text-decoration-color                 : var(--interactive);
     }
 
     .cover h1 {
@@ -131,13 +172,87 @@
           readyTransition : true, // default
           responsiveTables: false  // default
       },
-      executeScript: true
+      vueGlobalOptions: {
+        data() {
+          return {
+            // Air Table Data Objects
+            atBackgrounds: null,
+            atAppearance: null,
+            atPhysicalDetail: null,
+            atClothing: null,
+            atVice: null,
+            atVirtue: null,
+            atMannerism: null,
+            atArmor: null,
+            atWeapons: null,
+          };
+        },
+        mounted () {
+          // Backgrounds
+          let 
+            table = 'Backgrounds',
+            view = 'Grid view',
+            url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atBackgrounds = response.data.records));
+
+          // Appearance
+          table = 'Traits';
+          view = 'Appearance';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atAppearance = response.data.records));
+
+          // Physical Detail
+          table = 'Traits';
+          view = 'Physical Detail';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atPhysicalDetail = response.data.records));
+
+          // Clothing
+          table = 'Traits';
+          view = 'Clothing';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atClothing = response.data.records));
+
+          // Vice
+          table = 'Traits';
+          view = 'Vice';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atVice = response.data.records));
+
+          // Virtue
+          table = 'Traits';
+          view = 'Virtue';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atVirtue = response.data.records));
+          
+          // Mannerism
+          table = 'Traits';
+          view = 'Mannerism';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMannerism = response.data.records));
+        }
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
