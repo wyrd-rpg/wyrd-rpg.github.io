@@ -1,3 +1,4 @@
+console.log('index.js')
 // END STATE GOALS
 // Separate functions/imports for each call which returns needed data from a given table.
 // The data should be accessible in an easy to understand way such as dot notation (table.field.value)
@@ -61,7 +62,7 @@ async function getRecordsAsList(table, view) {
         let li = document.createElement('li');
         li.append(backgroundData[i].fields.Background);
         backgroundsList.append(li);
-    }
+    } 
 
     // Physical Traits
     // ---------------------------------------------------------------------------------------------------

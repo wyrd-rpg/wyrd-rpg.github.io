@@ -172,13 +172,87 @@
           readyTransition : true, // default
           responsiveTables: false  // default
       },
-      executeScript: true
+      vueGlobalOptions: {
+        data() {
+          return {
+            // Air Table Data Objects
+            atBackgrounds: null,
+            atAppearance: null,
+            atPhysicalDetail: null,
+            atClothing: null,
+            atVice: null,
+            atVirtue: null,
+            atMannerism: null,
+            atArmor: null,
+            atWeapons: null,
+          };
+        },
+        mounted () {
+          // Backgrounds
+          let 
+            table = 'Backgrounds',
+            view = 'Grid view',
+            url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atBackgrounds = response.data.records));
+
+          // Appearance
+          table = 'Traits';
+          view = 'Appearance';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atAppearance = response.data.records));
+
+          // Physical Detail
+          table = 'Traits';
+          view = 'Physical Detail';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atPhysicalDetail = response.data.records));
+
+          // Clothing
+          table = 'Traits';
+          view = 'Clothing';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atClothing = response.data.records));
+
+          // Vice
+          table = 'Traits';
+          view = 'Vice';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atVice = response.data.records));
+
+          // Virtue
+          table = 'Traits';
+          view = 'Virtue';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atVirtue = response.data.records));
+          
+          // Mannerism
+          table = 'Traits';
+          view = 'Mannerism';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMannerism = response.data.records));
+        }
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
