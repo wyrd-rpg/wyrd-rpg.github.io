@@ -1,6 +1,6 @@
 # Equipment
 
-Roll or choose one result each from [**Armor & Clothing**](#armor--clothing), [**Weapons**](#weapons), and all [**Adventuring Gear**](#adventuring-gear) tables. For any results with a plus (+), gain the item in the group(s) to the left. *Ex. Rolling 6, 5 for Armor gets you a Shield, Helm, and Iron Cuirass.*
+Roll or choose one result each from [**Armor & Clothing**](#armor-and-clothing), [**Weapons**](#weapons), and all [**Adventuring Gear**](#adventuring-gear) tables. For any results with a plus (+), gain the item in the group(s) to the left. *Ex. Rolling 6, 5 for Armor gets you a Shield, Helm, and Iron Cuirass.*
 
 ## Weapons & Usage Die
 
@@ -27,28 +27,32 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
 | **+1 step** | Superior material or craftsmanship (masterwork, enchanted, reinforced), an abundance or extra bundle |
 | **-1 step** | Inferior material or craftsmanship (rusted, ancient, dull, damaged), sparse amount or half-used bundle |
 
-## Armor & Clothing
+## Armor & Clothing :id=armor-and-clothing
 
-<ol class="d36-table">
-    <li
-        v-for="item in atArmor"
-    >
-        <!-- <small>◆<span v-if="item.fields.Bulky">◆</span>&nbsp;</small> -->
-        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
-        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
-    </li>
-</ol>
+<div class="d36-table__wrap">
+    <ol class="d36-table wide">
+        <li
+            v-for="item in atArmor"
+        >
+            <!-- <small>◆<span v-if="item.fields.Bulky">◆</span>&nbsp;</small> -->
+            <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
+            <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+        </li>
+    </ol>
+</div>
 
 ## Weapons
 
-<ol class="d36-table">
-    <li
-        v-for="item in atWeapons"
-    >
-        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
-        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
-    </li>
-</ol>
+<div class="d36-table__wrap">
+    <ol class="d36-table wide">
+        <li
+            v-for="item in atWeapons"
+        >
+            <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
+            <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+        </li>
+    </ol>
+</div>
 
 ## Adventuring Gear
 
