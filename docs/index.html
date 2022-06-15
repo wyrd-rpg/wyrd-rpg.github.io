@@ -237,7 +237,14 @@
             atDungeoneeringGear: null,
             atTools: null,
             atTrinkets: null,
-            atBookSubjects: null
+            atBookSubjects: null,
+            atMagicParadoxes: null,
+            atMagicPhysicalEffects: null,
+            atMagicPhysicalElements: null,
+            atMagicPhysicalForms: null,
+            atMagicEtherealEffects: null,
+            atMagicEtherealElements: null,
+            atMagicEtherealForms: null,
           };
         },
         mounted () {
@@ -366,6 +373,69 @@
           axios
             .get(url)
             .then(response => (this.atBookSubjects = response.data.records))
+            .catch(error => console.log(error));
+
+          // Paradoxes
+          table = 'Magic';
+          view = 'Paradoxes';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMagicParadoxes = response.data.records))
+            .catch(error => console.log(error));
+
+          // Physical Effects
+          table = 'Magic';
+          view = 'Physical Effects';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMagicPhysicalEffects = response.data.records))
+            .catch(error => console.log(error));
+
+          // Physical Elements
+          table = 'Magic';
+          view = 'Physical Elements';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMagicPhysicalElements = response.data.records))
+            .catch(error => console.log(error));
+
+          // Physical Forms
+          table = 'Magic';
+          view = 'Physical Forms';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMagicPhysicalForms = response.data.records))
+            .catch(error => console.log(error));
+
+           // Ethereal Effects
+           table = 'Magic';
+          view = 'Ethereal Effects';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMagicEtherealEffects = response.data.records))
+            .catch(error => console.log(error));
+
+          // Ethereal Elements
+          table = 'Magic';
+          view = 'Ethereal Elements';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMagicEtherealElements = response.data.records))
+            .catch(error => console.log(error));
+
+          // Ethereal Forms
+          table = 'Magic';
+          view = 'Ethereal Forms';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMagicEtherealForms = response.data.records))
             .catch(error => console.log(error));
         }
       },

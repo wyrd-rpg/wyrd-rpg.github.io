@@ -15,47 +15,65 @@ To devise a spell, roll sets of 2d6 to determine the spell formula, then the spe
 | **5** | Physical Element + Physical Form | Ethereal Effect + Physical Element  |
 | **6** | Physical Element + Ethereal Form | Ethereal Effect +  Ethereal Element |
 
-## Paradoxes
-
-| paradoxes table |
-| --- |
-| tbd |
-
 ## Physical Effects
 
-| physical effects table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atMagicPhysicalEffects"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
 
 ## Physical Elements
 
-| physical Elements table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atMagicPhysicalElements"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
 
 ## Physical Forms
 
-| physical Forms table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atMagicPhysicalForms"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
 
 ## Ethereal Effects
 
-| ethereal Effects table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atMagicEtherealEffects"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
 
 ## Ethereal Elements
 
-| ethereal Elements table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atMagicEtherealElements"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
 
 ## Ethereal Forms
 
-| ethereal Forms table |
-| --- |
-| tbd |
+<ol class="d36-table">
+    <li
+        v-for="item in atMagicEtherealForms"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
 
 ## Casting a Spell
 
@@ -88,3 +106,13 @@ When item slots are all full, **Fatigue** cost becomes damage against the caster
 ## Spell Failure
 
 If a magic-user fails their ability test to cast a spell, reality rushes in to fill the paradoxical void, often with strange results. Roll a **[Paradox](#paradoxes)**.
+
+## Paradoxes
+
+<ol class="d36-table">
+    <li
+        v-for="item in atMagicParadoxes"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
