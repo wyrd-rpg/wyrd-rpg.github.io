@@ -17,7 +17,7 @@
     :root {
       --antique-white        : #FEEFDD;
       --almond               : #ECDFD2;
-      --umber                : #68534D;
+      --umber                : #68534D; /* rgba(104,83,77,1) */
       --dark-lava            : #4B3E2E;
       --auburn               : #9A332C;
       --crimson-ua           : #962B33;
@@ -27,6 +27,8 @@
       --sub-heading-color    : var(--auburn);
       --interactive          : var(--crimson-ua);
       --interactive-hover    : var(--antique-ruby);
+      --base-border-color    : 104,83,77;
+      --base-border-opacity  : 0.15;
     }
     /* Base
     ============================================================================= */
@@ -50,7 +52,7 @@
     }
 
     .sidebar {
-      border-right: 5px double rgba(0,0,0,0.25);
+      border-right: 5px double rgba(var(--base-border-color), var(--base-border-opacity));
       background: none;
     }
 
@@ -103,7 +105,7 @@
     }
 
     body .docsify-pagination-container {
-      border-top: 5px double rgba(0,0,0,.25);
+      border-top: 5px double rgba(var(--base-border-color), var(--base-border-opacity));
     }
 
     /* Cover
@@ -141,22 +143,45 @@
       column-count: 2;
     }
 
-    .markdown-section .d36-table.wide {
+    /* .markdown-section .d36-table.wide {
       width: 140%;
+    } */
+
+    .markdown-section .d36-table.gear {
+      column-count: 1;
     }
 
-    @media (min-width: 450px) {
-      .markdown-section .d36-table {
-        column-count: 3;
-        max-width: 41rem;
+    .gear__Ud {
+      float: right;
+    }
+
+    .markdown-section .d36-table.gear li {
+      border-bottom: 1px solid rgba(var(--base-border-color), var(--base-border-opacity));
+      padding-top: 0.25rem;
+    }
+
+    @media (min-width: 768px) {
+
+      .markdown-section .d36-table,
+      .markdown-section .d36-table.gear {
+        column-count: 2;
       }
-      .markdown-section .d36-table.wide {
+
+      /* .markdown-section .d36-table.wide {
         width: 100%;
+      } */
+
+    }
+
+    @media (min-width: 1100px) { 
+      .markdown-section .d36-table,
+      .markdown-section .d36-table.gear {
+        column-count: 3;
       }
     }
 
     .markdown-section .d36-table li:nth-child(6n) {
-      margin-bottom: 1rem;;
+      margin-bottom: 1.25rem;
     }
 
     /* Example Kits */
@@ -168,6 +193,16 @@
         grid-column-gap: 1rem;
         grid-row-gap: 0px;
       }
+    }
+
+    .markdown-section .kits-grid tbody tr,
+    .markdown-section .kits-grid th,
+    .markdown-section .kits-grid td {
+        padding: 0;
+        background: none;
+    }
+    .markdown-section .kits-grid th {
+        border-bottom: 1px solid rgba(var(--base-border-color), var(--base-border-opacity));
     }
 
   </style>
@@ -201,7 +236,8 @@
             atWeapons: null,
             atDungeoneeringGear: null,
             atTools: null,
-            atTrinkets: null     
+            atTrinkets: null,
+            atBookSubjects: null
           };
         },
         mounted () {
@@ -321,6 +357,15 @@
           axios
             .get(url)
             .then(response => (this.atTrinkets = response.data.records))
+            .catch(error => console.log(error));
+
+          // Book Subjects
+          table = 'Live_Starting_Equipment';
+          view = 'Book Subjects';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atBookSubjects = response.data.records))
             .catch(error => console.log(error));
         }
       },

@@ -1,49 +1,40 @@
 # Equipment
 
-Roll or choose one result each from [**Armor & Clothing**](#armor-and-clothing), [**Weapons**](#weapons), and all [**Adventuring Gear**](#adventuring-gear) tables. For any results with a plus (+), gain the item in the group(s) to the left. *Ex. Rolling 6, 5 for Armor gets you a Shield, Helm, and Iron Cuirass.*
+Roll or choose one result each from [**Armor & Clothing**](#armor-and-clothing), [**Weapons**](#weapons), and all [**Adventuring Gear**](#adventuring-gear) tables.
 
-## Weapons & Usage Die
+## 1. Armor & Clothing :id=armor-and-clothing
 
-| Type | Examples | Usage |
-| - | - | - |
-| **Lt. Melee** | *Dagger, Dirk, Cudgel* | Ud4 |
-| **Md. Melee** | *Smallsword, Mace, Spear, Battleaxe, War hammer* | Ud6 |
-| **Hv. Melee** | *Longsword, Halberd, Glaive* | Ud8 |
-| **Sm. Ranged** | *Sling, Wheellock Pistol* | Ud6 |
-| **Md. Ranged** | *Longbow, Crossbow, Blunderbuss* | Ud8 |
-| **Hv. Ranged** | *Arquebus, Musket* | Ud10 |
-
-## Homebrew Gear
-
-It's easy to create your own custom gear. Choose a base usage dice, then adjust based on quality. Don't forget an evocative name. 
-
-| Usage Die | Example Traits |
-| - | - |
-| **Ud1** | Single use |
-| **Ud2** | Low quality/damage, limited supply |
-| **Ud4** | Standard quality/damage, avg. supply |
-| **Ud6** | Above avg. quality/damage, md. supply |
-| **Ud8** | High quality/damage, lg. supply |
-| **+1 step** | Superior material or craftsmanship (masterwork, enchanted, reinforced), an abundance or extra bundle |
-| **-1 step** | Inferior material or craftsmanship (rusted, ancient, dull, damaged), sparse amount or half-used bundle |
-
-## Armor & Clothing :id=armor-and-clothing
-
-<div class="d36-table__wrap">
+<!-- <div class="d36-table__wrap">
     <ol class="d36-table wide">
         <li
             v-for="item in atArmor"
         >
-            <!-- <small>◆<span v-if="item.fields.Bulky">◆</span>&nbsp;</small> -->
+            <small>◆<span v-if="item.fields.Bulky">◆</span>&nbsp;</small>
             <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
             <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
         </li>
     </ol>
-</div>
+</div> -->
 
-## Weapons
 
-<div class="d36-table__wrap">
+<ol class="d36-table gear">
+    <li
+        v-for="item in atArmor"
+    >
+        <em class="gear__Ud" v-if="item.fields.Dice">
+            {{ item.fields.Dice[0] }}<span v-if="item.fields.Dice[1]">,
+            {{ item.fields.Dice[1] }}</span>
+        </em>
+        <div class="gear__items">
+            {{ item.fields.Item[0] }}<span v-if="item.fields.Item[1]">,
+            {{ item.fields.Item[1] }}</span>
+        </div>
+    </li>
+</ol>
+
+## 2. Weapons
+
+<!-- <div class="d36-table__wrap">
     <ol class="d36-table wide">
         <li
             v-for="item in atWeapons"
@@ -52,48 +43,87 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
             <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
         </li>
     </ol>
-</div>
+</div> -->
 
-## Adventuring Gear
+<ol class="d36-table gear">
+    <li
+        v-for="item in atWeapons"
+    >
+        <em class="gear__Ud" v-if="item.fields.Dice">
+            {{ item.fields.Dice[0] }}<span v-if="item.fields.Dice[1]">,
+            {{ item.fields.Dice[1] }}</span>
+        </em>
+        <div class="gear__items">
+            {{ item.fields.Item[0] }}<span v-if="item.fields.Item[1]">,
+            {{ item.fields.Item[1] }}</span>
+        </div>
+    </li>
+</ol>
 
-### Dungeoneering Gear
+## 3. Adventuring Gear
 
-<ol class="d36-table">
+### 3.1. Dungeoneering Gear
+
+<ol class="d36-table gear">
     <li
         v-for="item in atDungeoneeringGear"
     >
-        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
-        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+        <em class="gear__Ud" v-if="item.fields.Dice">
+            {{ item.fields.Dice[0] }}<span v-if="item.fields.Dice[1]">,
+            {{ item.fields.Dice[1] }}</span>
+        </em>
+        <div class="gear__items">
+            {{ item.fields.Item[0] }}<span v-if="item.fields.Item[1]">,
+            {{ item.fields.Item[1] }}</span>
+        </div>
     </li>
 </ol>
 
-### Tools
+### 3.2. Tools
 
-<ol class="d36-table">
+<ol class="d36-table gear">
     <li
         v-for="item in atTools"
     >
-        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
-        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+        <em class="gear__Ud" v-if="item.fields.Dice">
+            {{ item.fields.Dice[0] }}<span v-if="item.fields.Dice[1]">,
+            {{ item.fields.Dice[1] }}</span>
+        </em>
+        <div class="gear__items">
+            {{ item.fields.Item[0] }}<span v-if="item.fields.Item[1]">,
+            {{ item.fields.Item[1] }}</span>
+        </div>
     </li>
 </ol>
 
-### Trinkets
+### 3.3. Trinkets
 
-<ol class="d36-table">
+<ol class="d36-table gear">
     <li
         v-for="item in atTrinkets"
     >
-        <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
-        <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
+        <em class="gear__Ud" v-if="item.fields.Dice">
+            {{ item.fields.Dice[0] }}<span v-if="item.fields.Dice[1]">,
+            {{ item.fields.Dice[1] }}</span>
+        </em>
+        <div class="gear__items">
+            {{ item.fields.Item[0] }}<span v-if="item.fields.Item[1]">,
+            {{ item.fields.Item[1] }}</span>
+        </div>
     </li>
 </ol>
 
 ## Book Subjects
 
-| book subjects table |
-| --- |
-| tbd |
+If one of the gear options rolled is **book**, roll on the table below.
+
+<ol class="d36-table">
+    <li
+        v-for="item in atBookSubjects"
+    >
+        {{ item.fields.Item[0] }}
+    </li>
+</ol>
 
 ## Example Kits
 
@@ -157,9 +187,9 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
 |:-------------------|
 | ◆ Walking Stick, *Ud4* |
 | ◆ Pipeweed, *Ud4* |
-| ◆ Leather Vest, Ud2 |
+| ◆ Leather Vest, *Ud2* |
 | ◆◆ Cook pots |
-| ◆ Shortsword, Ud6 |
+| ◆ Shortsword, *Ud6* |
 | ◆ Potatoes, *Ud4* |
 
 | Magic-user  *7 Slots* |
@@ -190,3 +220,28 @@ It's easy to create your own custom gear. Choose a base usage dice, then adjust 
 | ◆ Metal file |
 
 </div>
+
+## Homebrew Gear
+
+It's easy to create your own custom gear. Choose a base [usage dice](getting-wyrd.md#usage-dice), then adjust based on quality. Don't forget an evocative name. 
+
+| Usage Die | Example Traits |
+| - | - |
+| **Ud1** | Single use |
+| **Ud2** | Low quality/damage, limited supply |
+| **Ud4** | Standard quality/damage, avg. supply |
+| **Ud6** | Above avg. quality/damage, md. supply |
+| **Ud8** | High quality/damage, lg. supply |
+| **+1 step** | Superior material or craftsmanship (masterwork, enchanted, reinforced), an abundance or extra bundle |
+| **-1 step** | Inferior material or craftsmanship (rusted, ancient, dull, damaged), sparse amount or half-used bundle |
+
+### Usage Die Examples
+
+| Type | Examples | Usage |
+| - | - | - |
+| **Lt. Melee** | *Dagger, Dirk, Cudgel* | Ud4 |
+| **Md. Melee** | *Smallsword, Mace, Spear, Battleaxe, War hammer* | Ud6 |
+| **Hv. Melee** | *Longsword, Halberd, Glaive* | Ud8 |
+| **Sm. Ranged** | *Sling, Wheellock Pistol* | Ud6 |
+| **Md. Ranged** | *Longbow, Crossbow, Blunderbuss* | Ud8 |
+| **Hv. Ranged** | *Arquebus, Musket* | Ud10 |
