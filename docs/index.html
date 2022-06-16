@@ -16,19 +16,20 @@
     ============================================================================= */
     :root {
       --antique-white        : #FEEFDD;
-      --almond               : #ECDFD2;
+      --almond               : #ECDFD2; /* rgba(236,223,210, 1) */
       --umber                : #68534D; /* rgba(104,83,77,1) */
       --dark-lava            : #4B3E2E;
       --auburn               : #9A332C;
       --crimson-ua           : #962B33;
       --antique-ruby         : #7E252B;
+      --prussian-blue        : #1C2D45;
 
       --heading-color        : var(--dark-lava);
       --sub-heading-color    : var(--auburn);
       --interactive          : var(--crimson-ua);
       --interactive-hover    : var(--antique-ruby);
       --base-border-color    : 104,83,77;
-      --base-border-opacity  : 0.15;
+      --base-border-opacity  : 0.25;
     }
     /* Base
     ============================================================================= */
@@ -43,17 +44,29 @@
 
       --breakpoint--sm       : 450px;
       /* sidebar */
-      --sidebar-name-color       : var(--interactive);
-      --sidebar-name-color--hover: var(--interactive-hover);
+      --sidebar-name-color              : var(--interactive);
+      --sidebar-name-color--hover       : var(--interactive-hover);
+      --sidebar-nav-link-color          : var(--almond);
+      --sidebar-nav-link-color--active  : var(--interactive);
     }
 
+    /* Main Background Styles -- Paper Vignette */
+    .content,
     .cover:before {
-      background: var(--base-background-color);
+      box-shadow: 
+        inset 0 -5px .5vw .05rem #280a0d,
+        inset 0 -1rem 25vw 0 #A47940;
+      background-color: var(--base-background-color);
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/ricepaper.png');
+      background-blend-mode: luminosity;
+      min-height: 100vh;
     }
 
     .sidebar {
-      border-right: 5px double rgba(var(--base-border-color), var(--base-border-opacity));
-      background: none;
+      /* border-right: 5px double rgba(var(--base-border-color), var(--base-border-opacity)); */
+      background-color: var(--base-background-color);
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/ricepaper.png');
+      background-blend-mode: exclusion;
     }
 
     .markdown-section {
@@ -74,9 +87,10 @@
       --strong-color                      : var(--base-color);
       --link-color                        : var(--interactive);
       --link-color--hover                 : var(--interactive-hover);
+      --table-head-background             : var(--prussian-blue);
       --table-row-even-background         : rgba(255,255,255, 0.25);
-      --table-row-odd-background          : var(--almond);
-      --blockquote-background             : var(--almond);
+      --table-row-odd-background          : rgba(236,223,210, 0.5);
+      --blockquote-background             : rgba(236,223,210, 0.5);
     }
 
     .markdown-section h1 {
@@ -99,6 +113,16 @@
       margin-top: 1.5rem;
     }
 
+    .markdown-section ol, .markdown-section ul {
+      padding-left: 1rem;
+    }
+
+    .markdown-section th {
+      padding-top: 0.15rem; 
+      padding-bottom: 0.15rem; 
+      color: var(--antique-white);
+    }
+
     .markdown-section table {
       width: 100%;
       display: table;
@@ -106,6 +130,10 @@
 
     body .docsify-pagination-container {
       border-top: 5px double rgba(var(--base-border-color), var(--base-border-opacity));
+    }
+
+    .pagination-item:not(:last-child) a .pagination-item-label, .pagination-item:not(:last-child) a .pagination-item-subtitle, .pagination-item:not(:last-child) a .pagination-item-title {
+      opacity: .666 !important;
     }
 
     /* Cover
@@ -117,6 +145,8 @@
       --cover-heading-font-size-max                      : 18rem;
       --cover-heading-font-weight                        : 600;
       --cover-background-color                           : unset;
+      --cover-background-repeat                          : repeat;
+      --cover-background-size                            : auto;
       --cover-link-color                                 : var(--interactive);
       --cover-link-color--hover                          : var(--interactive-hover);
       --cover-link-text-decoration-color                 : var(--interactive);
@@ -143,10 +173,6 @@
       column-count: 2;
     }
 
-    /* .markdown-section .d36-table.wide {
-      width: 140%;
-    } */
-
     .markdown-section .d36-table.gear {
       column-count: 1;
     }
@@ -166,10 +192,6 @@
       .markdown-section .d36-table.gear {
         column-count: 2;
       }
-
-      /* .markdown-section .d36-table.wide {
-        width: 100%;
-      } */
 
     }
 
@@ -195,11 +217,13 @@
       }
     }
 
+    .markdown-section .kits-grid thead,
     .markdown-section .kits-grid tbody tr,
     .markdown-section .kits-grid th,
     .markdown-section .kits-grid td {
         padding: 0;
         background: none;
+        color: var(--base-color);
     }
     .markdown-section .kits-grid th {
         border-bottom: 1px solid rgba(var(--base-border-color), var(--base-border-opacity));
