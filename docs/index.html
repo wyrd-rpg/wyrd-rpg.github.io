@@ -55,6 +55,7 @@
 
     body {
       box-shadow: inset 0 0 10vw 1rem rgba(0,0,0,0.5);
+      background-image: url('./img/ricepaper-sidebar.webp');
     }
 
     /* Main Background Styles -- Paper Vignette */
@@ -261,8 +262,7 @@
       subMaxLevel: 2,
       auto2top: true,
       themeable: {
-          readyTransition : true, // default
-          responsiveTables: false  // default
+          responsiveTables: false
       },
       vueGlobalOptions: {
         data() {
@@ -288,6 +288,33 @@
             atMagicEtherealEffects: null,
             atMagicEtherealElements: null,
             atMagicEtherealForms: null,
+            atCrawlCityLocations: null,
+            atCrawlCityDetails: null,
+            atCrawlWilderLocations: null,
+            atCrawlWilderDetails: null,
+            atCrawlDungeonLocations: null,
+            atCrawlDungeonDetails: null,
+            atFolkenNames: null,
+            atFolkenSurnames: null,
+            atFolkenCityFolk: null,
+            atFolkenWilderFolk: null,
+            atFolkenUnderworldFolk: null,
+            atFolkenHooks: null,
+            atFolkenNpcTraits: null,
+            atFolkenNpcGoals: null,
+            atFolkenFactions: null,
+            atFolkenFactionTraits: null,
+            atFolkenFactionGoals: null,
+            atWorldSettlementNameParts: null,
+            atWorldSettlementNames: null,
+            atWorldDivineDomains: null,
+            atWorldWorldEvents: null,
+            atWorldRegionTraits: null,
+            atWorldRegionBiomes: null,
+            atWorldEnvironmentHazards: null,
+            atWorldDangerousPlaces: null,
+            atWorldDungeeonEntrances: null,
+            atWorldDungeonHazards: null
           };
         },
         mounted () {
@@ -480,6 +507,241 @@
             .get(url)
             .then(response => (this.atMagicEtherealForms = response.data.records))
             .catch(error => console.log(error));
+
+          // City Locations
+          table = 'The Crawl';
+          view = 'City Locations';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atCrawlCityLocations = response.data.records))
+            .catch(error => console.log(error));
+
+          // City Details
+          table = 'The Crawl';
+          view = 'City Details';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atCrawlCityDetails = response.data.records))
+            .catch(error => console.log(error));
+
+          // Wilder Locations
+          table = 'The Crawl';
+          view = 'Wilder Locations';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atCrawlWilderLocations = response.data.records))
+            .catch(error => console.log(error));
+          
+          // Wilder Details
+          table = 'The Crawl';
+          view = 'Wilder Details';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atCrawlWilderDetails = response.data.records))
+            .catch(error => console.log(error));
+
+          // Dungeon Locations
+          table = 'The Crawl';
+          view = 'Dungeon Locations';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atCrawlDungeonLocations = response.data.records))
+            .catch(error => console.log(error));
+
+          // Dungeon Details
+          table = 'The Crawl';
+          view = 'Dungeon Details';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atCrawlDungeonDetails = response.data.records))
+            .catch(error => console.log(error));
+
+          // Names
+          table = 'The Folken';
+          view = 'Names';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenNames = response.data.records))
+            .catch(error => console.log(error));
+
+          // Surnames
+          table = 'The Folken';
+          view = 'Surnames';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenSurnames = response.data.records))
+            .catch(error => console.log(error));
+
+          // City Folk
+          table = 'The Folken';
+          view = 'City Folk';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenCityFolk = response.data.records))
+            .catch(error => console.log(error));
+
+          // Wilder Folk
+          table = 'The Folken';
+          view = 'Wilder Folk';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenWilderFolk = response.data.records))
+            .catch(error => console.log(error));
+
+          // Underworld Folk
+          table = 'The Folken';
+          view = 'Underworld Folk';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenUnderworldFolk = response.data.records))
+            .catch(error => console.log(error));
+
+          // Npc Traits
+          table = 'The Folken';
+          view = 'Npc Traits';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenNpcTraits = response.data.records))
+            .catch(error => console.log(error));
+
+          // Npc Goals
+          table = 'The Folken';
+          view = 'Npc Goals';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenNpcGoals = response.data.records))
+            .catch(error => console.log(error));
+
+          // Factions
+          table = 'The Folken';
+          view = 'Factions';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenFactions = response.data.records))
+            .catch(error => console.log(error));
+
+          // Faction Traits
+          table = 'The Folken';
+          view = 'Faction Traits';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenFactionTraits = response.data.records))
+            .catch(error => console.log(error));
+
+          // Faction Goals
+          table = 'The Folken';
+          view = 'Faction Goals';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenFactionGoals = response.data.records))
+            .catch(error => console.log(error));
+
+          // Settlement Name Parts
+          table = 'The World';
+          view = 'Settlement Name Parts';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldSettlementNameParts = response.data.records))
+            .catch(error => console.log(error));
+
+          // Settlement Names
+          table = 'The World';
+          view = 'Settlement Names';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldSettlementNames = response.data.records))
+            .catch(error => console.log(error));
+
+          // Divine Domains
+          table = 'The World';
+          view = 'Divine Domains';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldDivineDomains = response.data.records))
+            .catch(error => console.log(error));
+
+          // World Events
+          table = 'The World';
+          view = 'World Events';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldWorldEvents = response.data.records))
+            .catch(error => console.log(error));
+
+          // Region Traits
+          table = 'The World';
+          view = 'Region Traits';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldRegionTraits = response.data.records))
+            .catch(error => console.log(error));
+
+          // Region Biomes
+          table = 'The World';
+          view = 'Region Biomes';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldRegionBiomes = response.data.records))
+            .catch(error => console.log(error));
+
+          // Environment Hazards
+          table = 'The World';
+          view = 'Environment Hazards';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldEnvironmentHazards = response.data.records))
+            .catch(error => console.log(error));
+
+          // Dangerous Places
+          table = 'The World';
+          view = 'Dangerous Places';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldDangerousPlaces = response.data.records))
+            .catch(error => console.log(error));
+
+          // Dungeon Entrances
+          table = 'The World';
+          view = 'Dungeon Entrances';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldDungeeonEntrances = response.data.records))
+            .catch(error => console.log(error));
+
+          // Dungeon Hazards
+          table = 'The World';
+          view = 'Dungeon Hazards';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atWorldDungeeonHazards = response.data.records))
+            .catch(error => console.log(error));
+          
         }
       },
     }
