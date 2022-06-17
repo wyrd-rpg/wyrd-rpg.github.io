@@ -607,9 +607,18 @@
             .then(response => (this.atFolkenUnderworldFolk = response.data.records))
             .catch(error => console.log(error));
 
-          // Npc Traits
+          // Hooks
           table = 'The Folken';
-          view = 'Npc Traits';
+          view = 'Hooks';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atFolkenHooks = response.data.records))
+            .catch(error => console.log(error));
+
+            // Npc Traits
+          table = 'The Folken';
+          view = 'NPC Traits';
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
@@ -618,7 +627,7 @@
 
           // Npc Goals
           table = 'The Folken';
-          view = 'Npc Goals';
+          view = 'NPC Goals';
           url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
           axios
             .get(url)
