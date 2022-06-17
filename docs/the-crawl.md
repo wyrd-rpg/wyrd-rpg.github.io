@@ -16,6 +16,7 @@ Create a **map of a location** to explore by rolling a handful of d6s and assemb
 For each die, add its value to all adjacent dice to determine its main function. Halls and Towers are single zones with all their dice summed.
 
 ### 2. Add Details & Secrets
+
 For each zone, roll or choose from the lists.
 
 ### 3. Roll Hazard Die
@@ -32,22 +33,105 @@ To increase tension, the Referee can step up the Hazard Die and roll on the [**E
 
 Hamlet: 6d6, Town: 12d6: City 18d6
 
-[civ d38 table]
+<ol class="d36-table">
+    <li
+        v-for="item in atCrawlCityLocations"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
 
 ### City Details & Secrets
 
-[city details d38 table]
+<ol class="d36-table">
+    <li
+        v-for="item in atCrawlCityDetails"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
+
 ### Civilization Hazards
 
 Roll 1/day, 2/day if PCs are looking for trouble
 
-1. Encounter *(roll **City Folk**)* or disaster
-2. Shortage *(drought, famine, trust, etc)*
-3. Advance season *(or other local change)*
-4. Foreshadow looming disaster
-5. Full recovery
+| d5| Result                                                                                                 |
+|---|--------------------------------------------------------------------------------------------------------|
+| 1 | Encounter *(roll [**City Folk**]((the-folken.md#city-folk))) or [**World Event**](the-world.md#world-events)* |
+| 2 | Shortage *(drought, famine, trust, etc)*                                                                   |
+| 3 | Advance season *(or other local change)*                                                                  |
+| 4 | Foreshadow looming disaster                                                                           |
+| 5 | Full recovery                                                                                         |
 
-## Hazard Tables
+## Wilderness
+
+Close: 3d6, Middling: 6d6: Distant 12d6
+
+<ol class="d36-table">
+    <li
+        v-for="item in atCrawlWilderLocations"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
+
+### Wilder Details & Secrets
+
+<ol class="d36-table">
+    <li
+        v-for="item in atCrawlWilderDetails"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
+
+### Wilder Hazards
+
+Roll 1/day on roads, 2-3/day in untamed wilds
+
+| d5| Result                                                             |
+|---|--------------------------------------------------------------------|
+| 1 | Encounter *(roll [**Wilder Folk**]((the-folken.md#wilder-folk)))*      |
+| 2 | Roll consumables, rest & eat or take fatigue                       |
+| 3 | [**Env. Hazard**](the-world.md#environment-hazards) or become lost |
+| 4 | Tracks or clue regarding next encounter                            |
+| 5 | Free wilderness turn                                               |
+
+## Dungeons
+
+Contained: 6d6, Large: 12d6: Mega: 18d6
+
+<ol class="d36-table">
+    <li
+        v-for="item in atCrawlDungeonLocations"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
+
+### Dungeon Details & Secrets
+
+<ol class="d36-table">
+    <li
+        v-for="item in atCrawlDungeonDetails"
+    >
+        {{ item.fields.Item }}
+    </li>
+</ol>
+
+### Escalating Hazards
+
+Roll 1/day, 2/day if PCs are looking for trouble
+
+| Step up & roll 1/zone or hour | d5 | d10 | d15 | d20 |
+| ----------------------------- |----|-----|-----|-----|
+| Encounter *(Escalate challenge)* | 1  | 6   | 11  | 16  |
+| Depletion *(Consumables/fatigue)*| 2  | 7   | 12  | 17  |
+| Locality *(trap, env. shifts)*   | 3  | 8   | 13  | 18  |
+| Omen *(tracks, sensory clue)*    | 4  | 9   | 14  | 19  |
+| Boon *(5=free turn, >5=treasure)* | 5  | 10  | 15  | 20  |
+
+## Example Hazards
 
 <div class="flex--lg">
 <div class="w33--lg mt2">
