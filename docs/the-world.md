@@ -5,7 +5,7 @@ Place names that use a common linguistic origin will allude to life and history 
 
 ## Settlement Generator
 
-Choose or roll d20s and combine results to create a Settlement. Add an ‘s’ or ‘in’ between any 2-3 parts. Optionally preface with "New" or "Old." Translations noted in parenthesis.
+Choose or roll d20s and combine results to create a Settlement. Add an 's' or 'in' between any 2-3 parts. Optionally preface with "New" or "Old." Translations noted in parenthesis.
 
 <ol class="d36-table">
     <li

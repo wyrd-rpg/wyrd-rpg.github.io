@@ -33,7 +33,7 @@ To increase tension, the Referee can step up the Hazard Die and roll on the [**E
 
 Hamlet: 6d6, Town: 12d6: City 18d6
 
-<ol class="d36-table">
+<ol class="d36-table single-space">
     <li
         v-for="item in atCrawlCityLocations"
     >
@@ -67,7 +67,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 
 Close: 3d6, Middling: 6d6: Distant 12d6
 
-<ol class="d36-table">
+<ol class="d36-table single-space">
     <li
         v-for="item in atCrawlWilderLocations"
     >
@@ -101,7 +101,7 @@ Roll 1/day on roads, 2-3/day in untamed wilds
 
 Contained: 6d6, Large: 12d6: Mega: 18d6
 
-<ol class="d36-table">
+<ol class="d36-table single-space">
     <li
         v-for="item in atCrawlDungeonLocations"
     >
@@ -134,7 +134,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 ## Example Hazards
 
 <div class="flex--lg">
-<div class="w33--lg mt2">
+<div class="w33--lg mt2 pr1--lg">
 
 ### Localities
 
@@ -148,7 +148,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 | 6 | Encounter        |
 
 </div>
-<div class="w33--lg mt2">
+<div class="w33--lg mt2 pl1--lg pr1--lg">
 
 ### Omens
 
@@ -162,7 +162,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 | 6 | Party surprises encounter    |
 
 </div>
-<div class="w33--lg mt2">
+<div class="w33--lg mt2 pl1--lg">
 
 ### Encounters
 
