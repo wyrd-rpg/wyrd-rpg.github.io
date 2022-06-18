@@ -60,6 +60,11 @@ Enemies who fail a **Will** test once they take their first casualty or when the
 
 **Hirelings** also make morale rolls when they aren't paid, their employer dies, or they face extraordinary danger. Hirelings who receive better treatment or pay roll with **[help](#help-and-hindrance)**.
 
+## Wealth Dice & Bartering
+
+There's no bookkeeping of coinage in Wyrd, partially because currency wasn't widespread historically; but mostly because it's a pain.
+Roll Wealth Dice vs the cost of an item, which starts as the same as its Ud by default. Roll higher and you can afford it. Roll lower, and you'll have to make other arrangements. A successful negotiation may grant advantage on a Wealth Dice roll. Rolling a 1 results in a debt, reducing the dice step, as usual.
+
 ## Advancement
 
 Ability scores advance with practice, failure, and reflection. When you **fail** an ability test (1-3) or roll **multiple successes** (6++), mark XP next to your ability. XP can also be earned in downtime by **training** or by **reflecting** on a past failure. If a PC frames a scene around a key instance of **failure**, they earn an additional XP.

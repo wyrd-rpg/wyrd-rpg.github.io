@@ -5,7 +5,7 @@ Place names that use a common linguistic origin will allude to life and history 
 
 ## Settlement Generator
 
-Choose or roll d20s and combine results to create a Settlement. Add an ‘s’ or ‘in’ between any 2-3 parts. Optionally preface with "New" or "Old." Translations noted in parenthesis.
+Choose or roll d20s and combine results to create a Settlement. Add an 's' or 'in' between any 2-3 parts. Optionally preface with "New" or "Old." Translations noted in parenthesis.
 
 <ol class="d36-table">
     <li
@@ -28,7 +28,7 @@ Choose or roll d20s and combine results to create a Settlement. Add an ‘s’ o
 
 ## Region Generator
 
-Combine a [Region Trait]() and a [Region Biome]() to create an evocative name for that land.
+Combine a [Region Trait](#region-traits) and a [Region Biome](#region-biomes) to create an evocative name for that land.
 
 ### Region Traits
 

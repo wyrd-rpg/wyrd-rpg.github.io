@@ -64,7 +64,7 @@
       box-shadow: 
         inset 0 0 .5vw .05rem #280a0d,
         inset 0 -1rem 25vw 0 #A47940;
-      background-color: var(--base-background-color);
+      background-color: var(--antique-white);
       background-image: url('./img/ricepaper-content.webp');
       min-height: 100vh;
     }
@@ -91,7 +91,7 @@
       --heading-h2-font-size              : var(--font-size-xxl);
       --heading-h3-font-size              : var(--font-size-xl);
       /* Text */
-      --strong-color                      : var(--base-color);
+      --strong-color                      : unset;
       --link-color                        : var(--interactive);
       --link-color--hover                 : var(--interactive-hover);
       --table-head-background             : var(--prussian-blue);
@@ -162,40 +162,53 @@
     .cover h1 {
       font-family               : var(--heading-font-family);
       font-size                 : clamp(var(--cover-heading-font-size-min), var(--cover-heading-font-size), var(--cover-heading-font-size-max));
+      line-height: 1;
+      margin-top: -2rem;
     }
     
     /* Custom Styles
     ============================================================================= */
     /* d36 tables */
-    .markdown-section .d36-table__wrap {
+    /* .markdown-section .d36-table__wrap {
       position: relative;
       overflow: scroll;
       left: -35px;
       width: 100vw;
       padding: 0 35px;
-    }
-    .markdown-section .d36-table {
+    } */
+    .markdown-section .d36-table,
+    .markdown-section .d20-table {
       padding-left: 0;
+      margin-bottom: 0;
       list-style-type: none;
       column-count: 2;
     }
 
-    .markdown-section .d36-table.gear {
+    .markdown-section .gear {
       column-count: 1;
     }
 
-    .gear__Ud {
-      float: right;
-    }
-
-    .markdown-section .d36-table.gear li {
+    .markdown-section .gear li {
       border-bottom: 1px solid rgba(var(--base-border-color), var(--base-border-opacity));
       padding-top: 0.25rem;
+    }
+
+    .markdown-section .gear__info {
+      cursor: help;
+    }
+
+    .markdown-section .gear__rank {
+      margin-right: .5rem;
+    }
+
+    .markdown-section .gear__Ud {
+      float: right;
     }
 
     @media (min-width: 768px) {
 
       .markdown-section .d36-table,
+      .markdown-section .d20-table,
       .markdown-section .d36-table.gear {
         column-count: 2;
       }
@@ -211,6 +224,10 @@
 
     .markdown-section .d36-table li:nth-child(6n) {
       margin-bottom: 1.25rem;
+    }
+
+    .markdown-section .d36-table.single-space li:nth-child(6n) {
+      margin-bottom: 0;
     }
 
     /* Example Kits */
@@ -236,16 +253,66 @@
         border-bottom: 1px solid rgba(var(--base-border-color), var(--base-border-opacity));
     }
 
+    /* Attribution */
+    @media (max-width: 884px) {
+      .item .source {
+        font-weight: 800;
+        margin-top: 1rem;
+      }
+    }
+    @media (min-width: 885px) {
+      
+      .attribution .item {
+        display: flex;
+      }
+
+      .attribution .item div {
+        flex-shrink: 1;
+      }
+
+      .attribution .item .new-line {
+        margin-left: auto;
+      }
+
+      .attribution .item .leading-dots {
+        border-top: 2px dotted var(--base-color);
+        flex-grow: 1;
+        position: relative;
+        top: 1rem;
+      }
+
+      .attribution .item div:last-child {
+        text-align: right;
+      }
+    
+    }
+
     /* Utilities */
     .mt2 {
       margin: var(--heading-margin);
+    }
+    .m-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mw75 {
+      max-width: calc(100% * 2/3);
     }
     @media (min-width: 1024px) {
       .flex--lg {
         display: flex;
       }
+      .w50--lg {
+        width: 50%;
+      }
       .w33--lg {
         width: calc(100% / 3);
+      }
+      .pr1--lg {
+        padding-right: 0.5rem;
+      }
+      .pl1--lg {
+        padding-left: 0.5rem;
       }
     }
 
@@ -314,7 +381,18 @@
             atWorldEnvironmentHazards: null,
             atWorldDangerousPlaces: null,
             atWorldDungeonEntrances: null,
-            atWorldDungeonHazards: null
+            atWorldDungeonHazards: null,
+            atTreasureClothing: null,
+            atTreasureLightArmor: null,
+            atTreasureHeavyArmor: null,
+            atTreasureOneHandedWeapons: null,
+            atTreasureTwoHandedWeapons: null,
+            atTreasureRangedWeapons: null,
+            atTreasureBooksMaps: null,
+            atTreasureToolsGear: null,
+            atTreasureCurios: null,
+            atMaterialsArmor: null,
+            atMaterialsWeapons: null
           };
         },
         mounted () {
@@ -750,7 +828,106 @@
             .get(url)
             .then(response => (this.atWorldDungeonHazards = response.data.records))
             .catch(error => console.log(error));
+
+          // Treasure: Clothing
+          table = 'Treasure';
+          view = 'Clothing';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureClothing = response.data.records))
+            .catch(error => console.log(error));
+
+          // Treasure: Light Armor
+          table = 'Treasure';
+          view = 'Light Armor';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureLightArmor = response.data.records))
+            .catch(error => console.log(error));
+
+          // Treasure: Heavy Armor
+          table = 'Treasure';
+          view = 'Heavy Armor';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureHeavyArmor = response.data.records))
+            .catch(error => console.log(error));
           
+          // Treasure: One-handed Weapons
+          table = 'Treasure';
+          view = 'One-handed Weapons';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureOneHandedWeapons = response.data.records))
+            .catch(error => console.log(error));
+
+          // Treasure: Two-handed Weapons
+          table = 'Treasure';
+          view = 'Two-handed Weapons';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureTwoHandedWeapons = response.data.records))
+            .catch(error => console.log(error));
+
+          // Treasure: Ranged Weapons
+          table = 'Treasure';
+          view = 'Ranged Weapons';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureRangedWeapons = response.data.records))
+            .catch(error => console.log(error));
+
+          // Treasure: Books & Maps
+          table = 'Treasure';
+          view = 'Books Maps';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureBooksMaps = response.data.records))
+            .catch(error => console.log(error));
+
+          // Treasure: Tools & Gear
+          table = 'Treasure';
+          view = 'Tools Gear';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureToolsGear = response.data.records))
+            .catch(error => console.log(error));
+
+          // Treasure: Curios
+          table = 'Treasure';
+          view = 'Curios';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atTreasureCurios = response.data.records))
+            .catch(error => console.log(error));
+
+          // Armor Materials
+          table = 'Materials';
+          view = 'Armor Materials';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMaterialsArmor = response.data.records))
+            .catch(error => console.log(error));
+
+          // Weapon Materials
+          table = 'Materials';
+          view = 'Weapon Materials';
+          url = `https://api.airtable.com/v0/appIn0GQksTbRvLRb/${table}?api_key=keymozIRq1SpsUPa6&view=${view}`;
+          axios
+            .get(url)
+            .then(response => (this.atMaterialsWeapons = response.data.records))
+            .catch(error => console.log(error));
+            
         }
       },
     }

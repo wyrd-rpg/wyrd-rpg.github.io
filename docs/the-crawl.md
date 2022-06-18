@@ -33,7 +33,7 @@ To increase tension, the Referee can step up the Hazard Die and roll on the [**E
 
 Hamlet: 6d6, Town: 12d6: City 18d6
 
-<ol class="d36-table">
+<ol class="d36-table single-space">
     <li
         v-for="item in atCrawlCityLocations"
     >
@@ -57,7 +57,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 
 | d5| Result                                                                                                 |
 |---|--------------------------------------------------------------------------------------------------------|
-| 1 | Encounter *(roll [**City Folk**]((the-folken.md#city-folk))) or [**World Event**](the-world.md#world-events)* |
+| 1 | Encounter *(roll [**City Folk**](the-folken.md#city-folk)) or [**World Event**](the-world.md#world-events)* |
 | 2 | Shortage *(drought, famine, trust, etc)*                                                                   |
 | 3 | Advance season *(or other local change)*                                                                  |
 | 4 | Foreshadow looming disaster                                                                           |
@@ -67,7 +67,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 
 Close: 3d6, Middling: 6d6: Distant 12d6
 
-<ol class="d36-table">
+<ol class="d36-table single-space">
     <li
         v-for="item in atCrawlWilderLocations"
     >
@@ -91,7 +91,7 @@ Roll 1/day on roads, 2-3/day in untamed wilds
 
 | d5| Result                                                             |
 |---|--------------------------------------------------------------------|
-| 1 | Encounter *(roll [**Wilder Folk**]((the-folken.md#wilder-folk)))*      |
+| 1 | Encounter *(roll [**Wilder Folk**](the-folken.md#wilder-folk))*        |
 | 2 | Roll consumables, rest & eat or take fatigue                       |
 | 3 | [**Env. Hazard**](the-world.md#environment-hazards) or become lost |
 | 4 | Tracks or clue regarding next encounter                            |
@@ -101,7 +101,7 @@ Roll 1/day on roads, 2-3/day in untamed wilds
 
 Contained: 6d6, Large: 12d6: Mega: 18d6
 
-<ol class="d36-table">
+<ol class="d36-table single-space">
     <li
         v-for="item in atCrawlDungeonLocations"
     >
@@ -134,7 +134,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 ## Example Hazards
 
 <div class="flex--lg">
-<div class="w33--lg mt2">
+<div class="w33--lg mt2 pr1--lg">
 
 ### Localities
 
@@ -148,7 +148,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 | 6 | Encounter        |
 
 </div>
-<div class="w33--lg mt2">
+<div class="w33--lg mt2 pl1--lg pr1--lg">
 
 ### Omens
 
@@ -162,7 +162,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 | 6 | Party surprises encounter    |
 
 </div>
-<div class="w33--lg mt2">
+<div class="w33--lg mt2 pl1--lg">
 
 ### Encounters
 
