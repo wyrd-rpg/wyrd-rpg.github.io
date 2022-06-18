@@ -2,9 +2,9 @@
 
 *Wyrd* is *fate* or *destiny*, but not the "inexorable fate" of the ancient Greeks. In Old English, it means, "to come to pass, to become." In Norse, a trinity of goddesses connect all that was, is, and will become. In other words, *Wyrd* is not an end-point, but something continually happening around us at all times.
 
-> *"Gæð a wyrd swa hio scel!"*  
-> *(Fate goes ever as she shall!)*  
-> *Beowulf*
+*"Gæð a wyrd swa hio scel!"*  
+*(Fate goes ever as she shall!)*  
+*-Beowulf*
 
 ## Purpose
 
