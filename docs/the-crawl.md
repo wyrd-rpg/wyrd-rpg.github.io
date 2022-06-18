@@ -57,7 +57,7 @@ Roll 1/day, 2/day if PCs are looking for trouble
 
 | d5| Result                                                                                                 |
 |---|--------------------------------------------------------------------------------------------------------|
-| 1 | Encounter *(roll [**City Folk**]((the-folken.md#city-folk))) or [**World Event**](the-world.md#world-events)* |
+| 1 | Encounter *(roll [**City Folk**](the-folken.md#city-folk)) or [**World Event**](the-world.md#world-events)* |
 | 2 | Shortage *(drought, famine, trust, etc)*                                                                   |
 | 3 | Advance season *(or other local change)*                                                                  |
 | 4 | Foreshadow looming disaster                                                                           |
@@ -91,7 +91,7 @@ Roll 1/day on roads, 2-3/day in untamed wilds
 
 | d5| Result                                                             |
 |---|--------------------------------------------------------------------|
-| 1 | Encounter *(roll [**Wilder Folk**]((the-folken.md#wilder-folk)))*      |
+| 1 | Encounter *(roll [**Wilder Folk**](the-folken.md#wilder-folk))*        |
 | 2 | Roll consumables, rest & eat or take fatigue                       |
 | 3 | [**Env. Hazard**](the-world.md#environment-hazards) or become lost |
 | 4 | Tracks or clue regarding next encounter                            |

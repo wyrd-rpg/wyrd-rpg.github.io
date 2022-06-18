@@ -28,7 +28,7 @@ Choose or roll d20s and combine results to create a Settlement. Add an 's' or 'i
 
 ## Region Generator
 
-Combine a [Region Trait]() and a [Region Biome]() to create an evocative name for that land.
+Combine a [Region Trait](#region-traits) and a [Region Biome](#region-biomes) to create an evocative name for that land.
 
 ### Region Traits
 
