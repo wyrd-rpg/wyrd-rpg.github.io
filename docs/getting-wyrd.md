@@ -30,7 +30,7 @@ If an action is helped, roll an extra d6 help die. If an ally helps, they roll t
 
 All consumable items have **usage dice (Ud)**. Weapons, armor, arrows, torches, even abilities, are consumable. When using an item, PCs roll the relevant Ud. For weapons, results also indicate damage. For armor, damage is reduced. A roll of 1 means the item is worn, sundered, or used up, and the usage dice is reduced by 1 step.
 
-**Ud12 → Ud10 → Ud8 → Ud6 → Ud4 → Ud2**
+**Ud12→Ud10→Ud8→Ud6→Ud4→Ud2**
 
 Any Ud can be reduced (by rolling a 1, or other consequence) or increased (by repair, resupply, modification, or magical means). A roll of 1 on a Ud2 **consumes** or **destroys** the item for good.
 

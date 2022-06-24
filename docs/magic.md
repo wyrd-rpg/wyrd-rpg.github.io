@@ -87,7 +87,9 @@ Inspired by the spell name, the PC describes the scope of the spell in detail. I
 | 3 | *major (+3/3d6)*      | *far*         |
 | 4 | *spectacular (+4/4d6)* | *within sight* |
 | 5 | *legendary (+5/5d6)*   | *out of sight* |
-|**F**| **3. Area**       | **4. Duration** |
+
+| F | 3. Area             | 4. Duration  |
+|:-:|:-------------------:|:------------:|
 | 0 | *self*               | *instant*     |
 | 1 | *single target*       | *Ud4*         |
 | 2 | *several targets*     | *Ud6*         |
