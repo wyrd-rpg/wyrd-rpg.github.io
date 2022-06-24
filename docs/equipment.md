@@ -4,19 +4,6 @@ Roll or choose one result each from [**Armor & Clothing**](#armor-and-clothing),
 
 ## 1. Armor & Clothing :id=armor-and-clothing
 
-<!-- <div class="d36-table__wrap">
-    <ol class="d36-table wide">
-        <li
-            v-for="item in atArmor"
-        >
-            <small>◆<span v-if="item.fields.Bulky">◆</span>&nbsp;</small>
-            <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
-            <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
-        </li>
-    </ol>
-</div> -->
-
-
 <ol class="d36-table gear">
     <li
         v-for="item in atArmor"
@@ -33,17 +20,6 @@ Roll or choose one result each from [**Armor & Clothing**](#armor-and-clothing),
 </ol>
 
 ## 2. Weapons
-
-<!-- <div class="d36-table__wrap">
-    <ol class="d36-table wide">
-        <li
-            v-for="item in atWeapons"
-        >
-            <span :title="item.fields.Dice[0]">{{ item.fields.Item[0] }}</span><span v-if="item.fields.Item[1]">,
-            <span :title="item.fields.Dice[1]">{{ item.fields.Item[1] }}</span></span>
-        </li>
-    </ol>
-</div> -->
 
 <ol class="d36-table gear">
     <li

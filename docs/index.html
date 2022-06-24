@@ -41,6 +41,7 @@
       --base-font-weight     : normal;
       --base-letter-spacing  : ;
       --base-line-height     : 1.7;
+      --base-template-margin : 35px;
 
       --breakpoint--sm       : 450px;
       /* sidebar */
@@ -77,8 +78,8 @@
     }
 
     .markdown-section {
-      padding-left           : 35px;
-      padding-right          : 35px;
+      padding-left           : var(--base-template-margin);
+      padding-right          : var(--base-template-margin);
     }
     
     /* Content
@@ -121,7 +122,7 @@
     }
 
     .markdown-section ol, .markdown-section ul {
-      padding-left: 1rem;
+      padding-left: 1.25rem;
     }
 
     .markdown-section th {
@@ -133,6 +134,21 @@
     .markdown-section table {
       width: 100%;
       display: table;
+    }
+
+    @media (max-width: 767px) {
+      .markdown-section .table-scroll {
+        position: relative;
+        overflow: scroll;
+        left: calc(-1 * var(--base-template-margin));
+        width: 100vw;
+        padding-left: var(--base-template-margin);
+        padding-right: var(--base-template-margin);
+      }
+
+      .markdown-section .table-scroll table {
+        margin: 0;
+      }
     }
 
     body .docsify-pagination-container {
@@ -278,7 +294,7 @@
         border-top: 2px dotted var(--base-color);
         flex-grow: 1;
         position: relative;
-        top: 1rem;
+        top: 1.15rem;
       }
 
       .attribution .item div:last-child {
@@ -301,6 +317,9 @@
     @media (min-width: 1024px) {
       .flex--lg {
         display: flex;
+      }
+      .w66--lg {
+        width: calc(100% * 2/3);
       }
       .w50--lg {
         width: 50%;
@@ -394,6 +413,18 @@
             atMaterialsArmor: null,
             atMaterialsWeapons: null
           };
+        },
+        computed: {
+          // Creates a new Filtered Property of just items with subcategory of Prefix
+          settlementNamePartsPrefix() {
+            return this.atWorldSettlementNameParts.filter(item => item.fields.SubCategory == 'Prefix')
+          },
+          settlementNamePartsMiddle() {
+            return this.atWorldSettlementNameParts.filter(item => item.fields.SubCategory == 'Middle')
+          },
+          settlementNamePartsSuffix() {
+            return this.atWorldSettlementNameParts.filter(item => item.fields.SubCategory == 'Suffix')
+          }
         },
         mounted () {
           // Backgrounds

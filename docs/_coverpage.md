@@ -1,6 +1,6 @@
 <div class="m-auto w50--lg mw75">
 
-![alt text](/img/Nornir_by_Piertsch.webp "Nornir_by_Pietsch")
+![Nornir by Pietsch](/img/Nornir_by_Piertsch.webp)
 
 </div>
 

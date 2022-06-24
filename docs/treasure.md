@@ -138,6 +138,23 @@ As PCs adventure, they can acquire **Treasure dice**. These can be spent immedia
     </li>
 </ol>
 
+## Ranged Weapons
+
+<ol class="d20-table gear">
+    <li
+        v-for="item in atTreasureRangedWeapons"
+    >
+        <em class="gear__Ud" v-if="item.fields.Dice">
+            {{ item.fields.Dice }}
+        </em>
+        <div class="gear__items">
+            <span class="gear__rank">{{ item.fields.Rank }}</span>
+            <span v-if="item.fields.Symbol" class="gear__info" :title="item.fields.Tag">{{ item.fields.Symbol }}&nbsp;</span>
+            {{ item.fields.Item }}
+        </div>
+    </li>
+</ol>
+
 <blockquote>
 
 ### Weapon Materials
