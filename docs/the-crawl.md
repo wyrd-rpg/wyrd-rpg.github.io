@@ -9,7 +9,11 @@ Create a **map of a location** to explore by rolling a handful of d6s and assemb
 5. **Tower:** Stack all, must touch at least 2 dice
 6. **Hall:** Merge all, can touch up to 4 dice
 
-![alt text](https://via.placeholder.com/800x300 "Provided by unsplash.com")
+<div class="m-auto w50--lg">
+
+![Dice arranged next to a drawing of rooms](/img/wallet-dungeon.webp "Image of dice arranged next to a drawing of rooms representing the dice arrangement")
+
+</div>
 
 ### 1. Define Zones
 
@@ -23,9 +27,13 @@ For each zone, roll or choose from the lists.
 
 Roll a **Hazard Die** (1d10/2) within a given locale to drive gameplay and introduce complications.
 
+<div class="table-scroll">
+
 | 1        | 2         | 3         | 4    | 5      |
 |:--------:|:---------:|:---------:|:----:|:------:|
 | *Setback* | *Depletion* | *Locality* | *Omen* | *Boon* |
+
+</div>
 
 To increase tension, the Referee can step up the Hazard Die and roll on the [**Escalating Hazards**](#escalating-hazards) table. Do this after a fight breaks out, an hour of exploration, or any unique event that should raise the stakes.
 
@@ -123,13 +131,17 @@ Contained: 6d6, Large: 12d6: Mega: 18d6
 
 Roll 1/day, 2/day if PCs are looking for trouble
 
-| Step up & roll 1/zone or hour | d5 | d10 | d15 | d20 |
-| ----------------------------- |----|-----|-----|-----|
-| Encounter *(Escalate challenge)* | 1  | 6   | 11  | 16  |
-| Depletion *(Consumables/fatigue)*| 2  | 7   | 12  | 17  |
-| Locality *(trap, env. shifts)*   | 3  | 8   | 13  | 18  |
-| Omen *(tracks, sensory clue)*    | 4  | 9   | 14  | 19  |
-| Boon *(5=free turn, >5=treasure)* | 5  | 10  | 15  | 20  |
+<div class="table-scroll">
+
+| Step up & roll 1/zone or hour                            | d5 | d10 | d15 | d20 |
+| -------------------------------------------------------- |----|-----|-----|-----|
+| Encounter <small>(Escalate&nbsp;challenge)</small>       | 1  | 6   | 11  | 16  |
+| Depletion <small>(Consumables/fatigue)</small>           | 2  | 7   | 12  | 17  |
+| Locality <small>(trap,&nbsp;env.&nbsp;shifts)</small>    | 3  | 8   | 13  | 18  |
+| Omen <small>(tracks,&nbsp;sensory&nbsp;clue)</small>     | 4  | 9   | 14  | 19  |
+| Boon <small>(5=free&nbsp;turn,&nbsp;>5=treasure)</small> | 5  | 10  | 15  | 20  |
+
+</div>
 
 ## Example Hazards
 
