@@ -7,14 +7,59 @@ Place names that use a common linguistic origin will allude to life and history 
 
 Choose or roll d20s and combine results to create a Settlement. Add an 's' or 'in' between any 2-3 parts. Optionally preface with "New" or "Old." Translations noted in parenthesis.
 
-<ol class="d36-table">
+<div class="flex--lg">
+<div class="w33--lg pr1--lg">
+
+### Prefix
+
+<ol>
+    <li
+        v-for="item in settlementNamePartsPrefix"
+    >
+        {{ item.fields.Item }}
+        <span v-if="item.fields.Translation">({{ item.fields.Translation }})</span>
+    </li>
+</ol>
+
+</div>
+<div class="w33--lg pl1--lg pr1--lg">
+
+### Middle
+
+<ol>
+    <li
+        v-for="item in settlementNamePartsMiddle"
+    >
+        {{ item.fields.Item }}
+        <span v-if="item.fields.Translation">({{ item.fields.Translation }})</span>
+    </li>
+</ol>
+
+</div>
+<div class="w33--lg pl1--lg">
+
+### Suffix
+
+<ol>
+    <li
+        v-for="item in settlementNamePartsSuffix"
+    >
+        {{ item.fields.Item }}
+        <span v-if="item.fields.Translation">({{ item.fields.Translation }})</span>
+    </li>
+</ol>
+
+</div>
+</div>
+
+<!-- <ol class="d36-table">
     <li
         v-for="item in atWorldSettlementNameParts"
     >
         {{ item.fields.Item }}
         <span v-if="item.fields.Translation">({{ item.fields.Translation }})</span>
     </li>
-</ol>
+</ol> -->
 
 ### Towns & Villages
 

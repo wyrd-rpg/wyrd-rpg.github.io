@@ -121,7 +121,7 @@
     }
 
     .markdown-section ol, .markdown-section ul {
-      padding-left: 1rem;
+      padding-left: 1.25rem;
     }
 
     .markdown-section th {
@@ -394,6 +394,18 @@
             atMaterialsArmor: null,
             atMaterialsWeapons: null
           };
+        },
+        computed: {
+          // Creates a new Filtered Property of just items with subcategory of Prefix
+          settlementNamePartsPrefix() {
+            return this.atWorldSettlementNameParts.filter(item => item.fields.SubCategory == 'Prefix')
+          },
+          settlementNamePartsMiddle() {
+            return this.atWorldSettlementNameParts.filter(item => item.fields.SubCategory == 'Middle')
+          },
+          settlementNamePartsSuffix() {
+            return this.atWorldSettlementNameParts.filter(item => item.fields.SubCategory == 'Suffix')
+          }
         },
         mounted () {
           // Backgrounds
