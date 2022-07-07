@@ -12,13 +12,47 @@ Characters have four abilities: **Power**, **Grace**, **Intellect**, and **Will*
 
 Roll or choose your character's background. This determines starting **wealth** and knowledge.
 
-<ol class="d36-table">
+<div class="flex--lg">
+<div class="w33--lg pr1--lg">
+
+**Ud2 Wealth**
+
+<ol class="d36-single-col">
     <li
-        v-for="item in atBackgrounds"
+        v-for="item in backgroundWealthD2"
     >
         {{ item.fields.Background }}
     </li>
 </ol>
+
+</div>
+<div class="w33--lg pl1--lg pr1--lg">
+
+**Ud4 Wealth**
+
+<ol class="d36-single-col">
+    <li
+        v-for="item in backgroundWealthD4"
+    >
+        {{ item.fields.Background }}
+    </li>
+</ol>
+
+</div>
+<div class="w33--lg pl1--lg">
+
+**Ud6 Wealth**
+
+<ol class="d36-single-col">
+    <li
+        v-for="item in backgroundWealthD6"
+    >
+        {{ item.fields.Background }}
+    </li>
+</ol>
+
+</div>
+</div>
 
 ## 3. Physical Traits
 
