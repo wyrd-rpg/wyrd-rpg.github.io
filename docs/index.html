@@ -192,6 +192,11 @@
       width: 100vw;
       padding: 0 35px;
     } */
+    .markdown-section .d36-single-col {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style-type: none;
+    }
     .markdown-section .d36-table,
     .markdown-section .d20-table {
       padding-left: 0;
@@ -238,7 +243,8 @@
       }
     }
 
-    .markdown-section .d36-table li:nth-child(6n) {
+    .markdown-section .d36-table li:nth-child(6n),
+    .markdown-section .d36-single-col li:nth-child(6n) {
       margin-bottom: 1.25rem;
     }
 
@@ -415,7 +421,17 @@
           };
         },
         computed: {
-          // Creates a new Filtered Property of just items with subcategory of Prefix
+          // Creates new Filtered Properties of Backgrounds by wealth
+          backgroundWealthD2() {
+            return this.atBackgrounds.filter(item => item.fields.Wealth == 'd2')
+          },
+          backgroundWealthD4() {
+            return this.atBackgrounds.filter(item => item.fields.Wealth == 'd4')
+          },
+          backgroundWealthD6() {
+            return this.atBackgrounds.filter(item => item.fields.Wealth == 'd6')
+          },
+          // Creates new Filtered Properties of items with subcategory of Prefix, Middle, and Suffix
           settlementNamePartsPrefix() {
             return this.atWorldSettlementNameParts.filter(item => item.fields.SubCategory == 'Prefix')
           },

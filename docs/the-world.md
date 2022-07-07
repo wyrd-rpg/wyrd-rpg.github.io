@@ -52,15 +52,6 @@ Choose or roll d20s and combine results to create a Settlement. Add an 's' or 'i
 </div>
 </div>
 
-<!-- <ol class="d36-table">
-    <li
-        v-for="item in atWorldSettlementNameParts"
-    >
-        {{ item.fields.Item }}
-        <span v-if="item.fields.Translation">({{ item.fields.Translation }})</span>
-    </li>
-</ol> -->
-
 ### Towns & Villages
 
 <ol class="d36-table">
